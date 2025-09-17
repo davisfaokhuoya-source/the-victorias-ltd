@@ -1,0 +1,7 @@
+@font-face {src:url('../fonts/Dealyo.ttf'); font-family: Dealyo;}
+
+.dealyo {font-family: Dealyo; font-size: 1em; color: rgb(224, 116, 16); padding-top: 5px;}
+
+.dealyo a{font-family: Dealyo; font-size: 2em; color: rgb(224, 116, 16);}
+
+.dealyo img{margin: 0px 5px 10px 0px;}
