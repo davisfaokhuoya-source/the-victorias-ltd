@@ -43,6 +43,12 @@
         <link rel="stylesheet" href="assets/css/responsive.css" />
 
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("T41VIoqSMLsJ-o7Ko"); // Replace with your Public Key
+      })();
+    </script>
     </head>
 
     <body data-spy="scroll" data-target=".navbar-collapse">
@@ -74,7 +80,7 @@
             
             <div class="row justify-content-center">
                 <div class="">
-                    <form action="" method="POST" enctype="text/plain" class="" style="width: auto; padding: 20px;">
+                    <form action="" method="POST" enctype="text/plain" class="" style="width: auto; padding: 20px;" id="contact-form">
                         <div>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                         </div>
@@ -182,6 +188,7 @@
 
     </body>
 </html>
+
 
 
 
