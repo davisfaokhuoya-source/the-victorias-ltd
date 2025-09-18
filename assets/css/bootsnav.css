@@ -1467,7 +1467,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
 }
 
 @media (min-width: 480px) and (max-width: 640px) {
-	#vis {display: none; visibility: hidden; !important;}
+	#vis {display: none !important;}
 	
     nav.bootsnav.navbar-full ul.nav{
         padding-top: 30px;
@@ -1475,6 +1475,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     }
 
 }
+
 
 
 
