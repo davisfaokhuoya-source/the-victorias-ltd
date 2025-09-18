@@ -53,7 +53,18 @@
 
     <body data-spy="scroll" data-target=".navbar-collapse">
 
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
 
+      emailjs.sendForm('service_7kjxhpm', 'template_du58afe', this) // 'this' refers to the form element
+        .then(function() {
+          console.log('SUCCESS!');
+          alert('Email sent successfully!');
+        }, function(error) {
+          console.log('FAILED...', error);
+          alert('Failed to send email. Please try again later.');
+        });
+    });
         <!-- Preloader -->
         <!--<div id="loading">
             <div id="loading-center">
@@ -188,6 +199,7 @@
 
     </body>
 </html>
+
 
 
 
