@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Affordable pricing for Victorias Ltd. services: Administrative Support, General Contracting, Software Development for Nigerian SMEs and international clients.">
+    <meta name="keywords" content="Nigeria business services, permit filing, admin support, contracting, software development, pricing">
+    <title>Pricing - Victorias Ltd.</title>
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Business Services",
+        "provider": {
+            "@type": "Organization",
+            "name": "Victorias Ltd.",
+            "url": "https://www.thevictorias.com.ng"
+        },
+        "areaServed": ["Nigeria", "United Kingdom", "United States"],
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Administrative Support",
+                "priceCurrency": "NGN",
+                "price": "64500"
+            },
+            {
+                "@type": "Offer",
+                "name": "General Contracting",
+                "priceCurrency": "NGN",
+                "price": "645000"
+            },
+            {
+                "@type": "Offer",
+                "name": "Software Development",
+                "priceCurrency": "NGN",
+                "price": "1075000"
+            }
+        ]
+    }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #004aad;
+        }
+        .toggle-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .toggle-btn {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            background: #004aad;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .toggle-btn.active {
+            background: #002555;
+        }
+        .pricing-section {
+            margin: 40px 0;
+        }
+        .pricing-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+        .pricing-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .pricing-card h3 {
+            color: #004aad;
+            margin: 0 0 10px;
+        }
+        .price {
+            font-size: 24px;
+            color: #e74c3c;
+            margin: 10px 0;
+        }
+        .hook {
+            font-style: italic;
+            color: #555;
+            margin: 10px 0;
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #004aad;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+        }
+        .notes {
+            font-size: 14px;
+            color: #555;
+            margin-top: 20px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-width: 400px;
+        }
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        @media (max-width: 768px) {
+            .pricing-table {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-overlay" id="popup-overlay"></div>
+    <div class="popup" id="popup">
+        <span class="popup-close" onclick="closePopup()">✕</span>
+        <h3>Flexible Pricing</h3>
+        <p>We offer 5-10% discounts for first-time clients or bulk services (e.g., multiple permits). Government fees (e.g., ₦50,000 for CAC) are non-negotiable but billed transparently. Contact us to discuss your needs!</p>
+        <a href="https://wa.me/+234XXXXXXXXXX" class="cta-btn">Chat Now</a>
+    </div>
+
+    <div class="container">
+        <h1>Pricing - Victorias Ltd.</h1>
+        <div class="toggle-container">
+            <button class="toggle-btn active" onclick="showCurrency('ngn')">NGN (Local)</button>
+            <button class="toggle-btn" onclick="showCurrency('usd')">USD (Foreign)</button>
+        </div>
+
+        <!-- Administrative Support -->
+        <div class="pricing-section">
+            <h2>Administrative Support</h2>
+            <div class="pricing-table" id="admin-table"></div>
+            <div class="notes">
+                <p><strong>Notes:</strong> Local prices include 7.5% VAT. Permit-related authority fees (e.g., ₦50,000 for CAC registration, ₦20,000 for tax clearance, ₦10,000-50,000 for business permits) are billed separately, VAT-exempt, and collected upfront. <a href="#" onclick="showPopup()">Flexible pricing available!</a></p>
+            </div>
+        </div>
+
+        <!-- General Contracting -->
+        <div class="pricing-section">
+            <h2>General Contracting</h2>
+            <div class="pricing-table" id="contracting-table"></div>
+            <div class="notes">
+                <p><strong>Notes:</strong> Local prices include 7.5% VAT. Permit fees (e.g., ₦100,000-500,000 for building permits, ₦50,000-200,000 for environmental approvals) are billed separately, VAT-exempt. <a href="#" onclick="showPopup()">Negotiable for SMEs!</a></p>
+            </div>
+        </div>
+
+        <!-- Software Development -->
+        <div class="pricing-section">
+            <h2>Software Development</h2>
+            <div class="pricing-table" id="software-table"></div>
+            <div class="notes">
+                <p><strong>Notes:</strong> Local prices include 7.5% VAT. Licensing fees (e.g., ₦30,000-100,000 for software tools) are billed separately, VAT-exempt. <a href="#" onclick="showPopup()">Flexible pricing for startups!</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const pricingData = {
+            admin: [
+                {
+                    tier: "Basic",
+                    desc: "10 hours/week virtual assistant or 1-2 permit submissions (e.g., tax clearance)",
+                    ngn: "₦64,500 (incl. 7.5% VAT)",
+                    usd: "$60",
+                    hook: "Filed a shop’s tax clearance in 2 days, saved ₦200k in fines."
+                },
+                {
+                    tier: "Standard",
+                    desc: "20 hours/week VA + 3-4 permit submissions (e.g., CAC registration)",
+                    ngn: "₦129,000 (incl. 7.5% VAT)",
+                    usd: "$120",
+                    hook: "Streamlined CAC filing for a startup, saved ₦500k in delays."
+                },
+                {
+                    tier: "Premium",
+                    desc: "40 hours/week VA, 5-7 permit submissions, social media (3 posts/week)",
+                    ngn: "₦215,000 (incl. 7.5% VAT)",
+                    usd: "$220",
+                    hook: "Managed permits and socials for a UK client, boosted efficiency 30%."
+                },
+                {
+                    tier: "Add-Ons",
+                    desc: "Extra permit submission or VA hours",
+                    ngn: "₦26,875/project or ₦6,450/hour (incl. VAT)",
+                    usd: "$25/project or $6/hour",
+                    hook: "Fast permits, stress-free business."
+                }
+            ],
+            contracting: [
+                {
+                    tier: "Basic",
+                    desc: "Procurement for small projects (<₦5M, 1-2 permits) or monthly cleaning",
+                    ngn: "₦645,000 (incl. 7.5% VAT)",
+                    usd: "$600",
+                    hook: "Sourced materials and permits for a school, cut costs 15%."
+                },
+                {
+                    tier: "Standard",
+                    desc: "Medium projects (₦5M-20M, 3-4 permits) or bi-weekly cleaning",
+                    ngn: "₦2,365,000 (incl. 7.5% VAT)",
+                    usd: "$2,200",
+                    hook: "Delivered a ₦10M office fit-out with permits, on time."
+                },
+                {
+                    tier: "Premium",
+                    desc: "Large projects (₦20M-50M, 5-7 permits) or full cleaning contracts",
+                    ngn: "₦5,912,500+ (incl. 7.5% VAT)",
+                    usd: "$5,500+",
+                    hook: "Built a Lagos office, saved ₦2M with smart procurement."
+                },
+                {
+                    tier: "Add-Ons",
+                    desc: "Extra permit submission, consulting, or cleaning",
+                    ngn: "₦53,750/project, ₦107,500/consult, ₦53,750/site (incl. VAT)",
+                    usd: "$50/project, $100/consult, $50/site",
+                    hook: "Hassle-free projects, start to finish."
+                }
+            ],
+            software: [
+                {
+                    tier: "Basic",
+                    desc: "Simple app (e.g., booking tool) or 10 hours/month maintenance",
+                    ngn: "₦1,075,000 (incl. 7.5% VAT)",
+                    usd: "$1,000",
+                    hook: "Built a booking app for a Lagos clinic in 3 weeks."
+                },
+                {
+                    tier: "Standard",
+                    desc: "Medium app (e.g., e-commerce) or 20 hours/month maintenance",
+                    ngn: "₦2,687,500 (incl. 7.5% VAT)",
+                    usd: "$2,500",
+                    hook: "Launched an e-shop for a startup, boosted sales 20%."
+                },
+                {
+                    tier: "Premium",
+                    desc: "Complex app (e.g., CRM with cybersecurity) or 40 hours/month support",
+                    ngn: "₦5,375,000+ (incl. 7.5% VAT)",
+                    usd: "$5,000+",
+                    hook: "Delivered a secure CRM for a UK client, no hacks."
+                },
+                {
+                    tier: "Add-Ons",
+                    desc: "Cybersecurity audit, compliance software, or extra hours",
+                    ngn: "₦215,000/audit, ₦53,750/project, ₦10,750/hour (incl. VAT)",
+                    usd: "$200/audit, $50/project, $10/hour",
+                    hook: "Secure software, built for growth."
+                }
+            ]
+        };
+
+        function showCurrency(currency) {
+            document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`button[onclick="showCurrency('${currency}')"]`).classList.add('active');
+
+            ['admin', 'contracting', 'software'].forEach(section => {
+                const table = document.getElementById(`${section}-table`);
+                table.innerHTML = '';
+                pricingData[section].forEach(tier => {
+                    const card = document.createElement('div');
+                    card.className = 'pricing-card';
+                    card.innerHTML = `
+                        <h3>${tier.tier}</h3>
+                        <p>${tier.desc}</p>
+                        <div class="price">${currency === 'ngn' ? tier.ngn : tier.usd}</div>
+                        <p class="hook">${tier.hook}</p>
+                        <a href="https://wa.me/+234XXXXXXXXXX?text=Inquiry%20about%20${section}%20${tier.tier}" class="cta-btn">Get Started</a>
+                        <a href="#" onclick="showPopup()" class="cta-btn">Request Quote</a>
+                    `;
+                    table.appendChild(card);
+                });
+            });
+        }
+
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('popup-overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('popup-overlay').style.display = 'none';
+        }
+
+        // Initialize with NGN
+        showCurrency('ngn');
+    </script>
+</body>
+</html>
