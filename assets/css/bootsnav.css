@@ -1378,7 +1378,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         padding-left: 15px;
         padding-right: 15px;
     }
-    
+    #vis {display: none; visibility: hidden;}
     nav.navbar.bootsnav .navbar-nav {
         padding-left: 15px;
         padding-right: 15px;
@@ -1475,6 +1475,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     }
 
 }
+
 
 
 
