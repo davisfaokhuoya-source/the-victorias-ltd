@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get N300,000 worth of services for N60,000 with The Victorias Ltd. - website, domain, email, Google Business, social setup, and Maps pin!">
+    <title>Chat with The Victorias Ltd. - Limited Offer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #F5F5F5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+        }
+        .gif-container {
+            margin-bottom: 20px;
+        }
+        .gif-container img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        h1 {
+            color: #FFD700; /* Gold for Naija vibe */
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .whatsapp-btn {
+            background-color: #25D366; /* WhatsApp green */
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            background-color: #1DA851;
+        }
+        @media (max-width: 480px) {
+            .card {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+            .whatsapp-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="gif-container">
+            <img src="https://i.pinimg.com/originals/e9/4e/c4/e94ec460145eec1fd844c7eccaf62cad.gif" alt="Leo the AI bot waving">
+        </div>
+        <h1>Hello from The Victorias Ltd.!</h1>
+        <p>I'm Milky Pinky, your welcome AI bot. Grab our <strong>N300,000 bundle</strong> (website, custom domain, email, Google Business profile, social setup, Google Maps pin) for just <strong>N60,000</strong>! Limited offer—first 50 only! Chat with The Victorias now!</p>
+        <a href="https://wa.me/+2348055538518?text=Hi%20Victorias!%20I%20want%20the%20N60k%20bundle%20for%20N300k%20services!" class="whatsapp-btn">Chat with The Victorias</a>
+    </div>
+</body>
+</html>
