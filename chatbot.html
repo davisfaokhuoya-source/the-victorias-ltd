@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to The Victorias Ltd. promotions! Chat for exclusive offers.">
-    <title>Chat with The Victorias Ltd. - Promo Offer</title>
+    <meta name="description" content="Get N300,000 worth of services for N60,000 with The Victorias Ltd. - website, domain, email, Google Business, social setup, and Maps pin!">
+    <title>Chat with The Victorias Ltd. - Limited Offer</title>
     <style>
         * {
             margin: 0;
@@ -50,7 +50,7 @@
             margin-bottom: 20px;
         }
         .whatsapp-btn {
-            background-color: #cd7f32; /* WhatsApp green */
+            background-color: rgb(224, 116, 16); /* WhatsApp green */
             color: #FFFFFF;
             padding: 12px 24px;
             border-radius: 25px;
@@ -83,41 +83,11 @@
 <body>
     <div class="card">
         <div class="gif-container">
-            <img src="[GIF URL]" alt="Waving welcome">
+            <img src="assets/images/gif.gif" alt="Leo the AI bot waving">
         </div>
-        <h1>Welcome to The Victorias Ltd.!</h1>
-        <p id="promoMessage">Discover our exclusive offers—chat now to learn more! Visit <a href="www.thevictorias.com.ng/policies" target="_blank">our policies</a> for NDPA compliance.</p>
-        <a href="#" id="whatsappBtn" class="whatsapp-btn">Chat with The Victorias</a>
+        <h1>Hello from The Victorias Ltd.!</h1>
+        <p>I'm Milky Pinky, your welcome AI bot. Grab our <strong>N300,000 bundle</strong> (website, custom domain, email, Google Business profile, social media setup, Google Maps pin) for just <strong>N60,000</strong>! Limited offer—first 20 only! Chat with The Victorias now!</p>
+        <a href="https://wa.me/+2348055538518?text=Hi%20Victorias!%20I%20want%20the%20N60k%20bundle%20for%20N300k%20services!" class="whatsapp-btn">Chat with The Victorias</a>
     </div>
-
-    <script>
-        // Function to get URL parameter
-        function getParameterByName(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-
-        // Get promo from URL and set custom message
-        const promo = getParameterByName('promo');
-        const promoMessage = document.getElementById('promoMessage');
-        const whatsappBtn = document.getElementById('whatsappBtn');
-        const baseWhatsAppText = "Hi Victorias! I'm interested in your services!";
-        let whatsappLink = `https://wa.me/+2348055538518?text=${encodeURIComponent(baseWhatsAppText)}`;
-
-        if (promo) {
-            const promoText = promo.charAt(0).toUpperCase() + promo.slice(1).toLowerCase(); // Capitalize first letter
-            switch (promo.toLowerCase()) {
-                case 'n60kbundle':
-                    promoMessage.textContent = `Welcome to the N60k Bundle offer! Get N300,000 worth of services (website, custom domain, email, Google Business, social setup, Maps pin) for just N60,000—limited to first 50! Chat now! Visit <a href="www.thevictorias.com.ng/policies" target="_blank">our policies</a> for NDPA compliance.`;
-                    whatsappLink = `https://wa.me/+2348055538518?text=${encodeURIComponent(`Hi Victorias! I'm here for the N60k Bundle offer!`)}`;
-                   
-            }
-        } else {
-            promoMessage.textContent = `Discover our exclusive offers—chat now to learn more! Visit <a href="www.thevictorias.com.ng/policies" target="_blank">our policies</a> for NDPA compliance.`;
-        }
-
-        // Update WhatsApp button link
-        whatsappBtn.href = whatsappLink;
-    </script>
 </body>
 </html>
