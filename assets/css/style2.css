@@ -1,7 +1,7 @@
  * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
         .hero { 
-            background: linear-gradient(135deg, #0f4c81 0%, #1e90ff 100%);
-            color:#e07410; 
+            background: linear-gradient(135deg, #e07410 0%, #1e90ff 100%);
+            color:#ffffff; 
             text-align:center; 
             padding:120px 20px 80px;
             position:relative;
