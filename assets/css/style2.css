@@ -7,11 +7,7 @@
             position:relative;
             overflow:hidden;
         }
-        .hero::before {
-            content:''; position:absolute; top:0; left:0; right:0; bottom:0;
-            background:url('https://images.unsplash.com/photo-1534665482403-a909d5d57c50?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover;
-            opacity:0.2;
-        }
+        
         .hero h1 { font-size:3.3rem; margin-bottom:16px; position:relative; }
         .hero p { font-size:1.3rem; max-width:800px; margin:0 auto 32px; position:relative; }
         .partners { 
