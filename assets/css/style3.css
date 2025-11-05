@@ -7,6 +7,31 @@
             position:relative;
             overflow:hidden;
         }
+/* Reduce gap between "What Students Learn" and "Past Projects" */
+.program {
+  margin-top: 0;            /* remove extra top gap */
+  margin-bottom: 6px;      /* small bottom spacing */
+  padding-top: 16px;       /* keep some breathing room */
+  padding-bottom: 12px;
+}
+
+.program h2 {
+  margin-top: 0;
+  margin-bottom: 10px;     /* tighten heading gap */
+  line-height: 1.1;
+}
+
+.program + #product,
+.program + section.product,
+.program + .product {
+  margin-top: 0;
+  padding-top: 0;          /* ensure the following section doesn't force extra gap */
+}
+
+/* If .head_title (inside #product) has top margin from existing CSS, reduce it */
+#product .head_title {
+  margin-top: 6px;         /* small offset so headings don't collide */
+}
 .hero::before {
             content:''; position:absolute; top:0; left:0; right:0; bottom:0;
             background:url('https://images.unsplash.com/photo-1534665482403-a909d5d57c50?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover;
